@@ -16,6 +16,7 @@ const main = (input, range) => {
   let maxProduct = 0;
   for (let i=0; i<=(input.length-range); i++) {
     let cache = input.slice(i, i+range);
+    // check if cached substring doesn't contain 0
     if (!cache.includes('0')) {
       getProduct(cache)>maxProduct ? maxProduct=getProduct(cache) : null;
     }
