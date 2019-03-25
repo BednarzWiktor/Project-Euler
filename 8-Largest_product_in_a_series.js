@@ -24,4 +24,5 @@ const main = (input, range) => {
   return maxProduct;
 }
 
+
 console.log(main(input, range));
