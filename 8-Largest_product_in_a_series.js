@@ -17,10 +17,7 @@ const main = (input, range) => {
   for (let i=0; i<=(input.length-range); i++) {
     let cache = input.slice(i, i+range);
     if (!cache.includes('0')) {
-      getProduct(cache)>maxProduct ?
-      if (getProduct(cache)>maxProduct) {
-        maxProduct=getProduct(cache)
-      }
+      getProduct(cache)>maxProduct ? maxProduct=getProduct(cache) : null;
     }
   }
   return maxProduct;
