@@ -5,7 +5,7 @@ console.time('euler'); // initialise timer
 
 const input = 1000;
 
-const main = (num) => {
+const main = (num) => { 
   let output = 0;
   for (let i=0; i<num; i++) { i%3===0 || i%5===0 ? output+=i : null}
   return output;
