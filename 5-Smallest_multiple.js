@@ -1,6 +1,7 @@
 // What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
-
 'use strict'
+
+console.time('euler'); // initialise timer
 
 const input = 20;
 
@@ -37,3 +38,4 @@ const main = (limit) => {
 }
 
 console.log(main(input));
+console.timeEnd('euler');

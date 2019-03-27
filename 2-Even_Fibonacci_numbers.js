@@ -1,6 +1,8 @@
 // Find the sum of even numbers in the Fibonacci sequence which don't exceed 4mil
 'use strict'
 
+console.time('euler'); // initialise timer
+
 const input = 4*10**6;
 
 // Create sequence of Fibonacci numbers up to the provided limit
@@ -18,6 +20,5 @@ const main = (sequence) => {
   return sequence.reduce((sum, num) => num%2===0 ? sum+num : sum, 0);
 }
 
-console.log(
-    main(createFibonacci(input))
-);
+console.log(main(createFibonacci(input)));
+console.timeEnd('euler');

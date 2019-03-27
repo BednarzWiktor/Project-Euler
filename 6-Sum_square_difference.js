@@ -1,6 +1,8 @@
 // Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 'use strict'
 
+console.time('euler'); // initialise timer
+
 const input = 100;
 
 // return inclusive sequence of numbers from 1 to limit
@@ -26,3 +28,4 @@ const main = (limit) => {
 }
 
 console.log(main(input));
+console.timeEnd('euler');

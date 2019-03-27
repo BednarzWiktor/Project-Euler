@@ -1,6 +1,8 @@
 // Find the largest palindrome made from the product of two multiplied 3-digit numbers
 'use strict'
 
+console.time('euler'); // initialise timer
+
 // Create reversed string
 const reverse = (string) => {
   let output = '';
@@ -34,3 +36,4 @@ const main = () => {
 }
 
 console.log(main());
+console.timeEnd('euler');

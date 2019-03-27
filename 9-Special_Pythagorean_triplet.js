@@ -2,6 +2,8 @@
 // Find the product abc.
 'use strict'
 
+console.time('euler'); // initialise timer
+
 const input = 1000;
 
 // return array of possible Pythagorean triplet for provided Euclid's formula variable m
@@ -42,3 +44,4 @@ const main = () => {
 
 
 console.log(main());
+console.timeEnd('euler');

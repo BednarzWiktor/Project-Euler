@@ -1,6 +1,8 @@
 // Find the sum of all the primes below two million.
 'use strict'
 
+console.time('euler'); // initialise timer
+
 const input = 2*10**6;
 
 // Simplified sieve of Atkin algorithm accounting for modulo 12 instead 60
@@ -52,3 +54,4 @@ const sieveOfAtkin = (limit) => {
 
 // log sum of all found primes
 console.log(sieveOfAtkin(input).reduce((sum, num) => sum+=num, 0));
+console.timeEnd('euler');

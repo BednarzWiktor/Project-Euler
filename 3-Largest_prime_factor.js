@@ -1,6 +1,8 @@
 // Find largest prime factor of a numbers
 'use strict'
 
+console.time('euler'); // initialise timer
+
 const input = 600851475143;
 
 // Test if number is prime
@@ -13,7 +15,7 @@ const isPrime = (num) => {
   return num>1; // fix for case of 1
 }
 
-// Check each natural number factor starting from the largest one (num/2) down to the smallest factor 
+// Check each natural number factor starting from the largest one (num/2) down to the smallest factor
 const main = (num) => {
   let i = 2;
   while (i<num/2) {
@@ -28,3 +30,4 @@ const main = (num) => {
 }
 
 console.log(main(input));
+console.timeEnd('euler');

@@ -1,6 +1,8 @@
 // What is the 10 001st prime number?
 'use strict'
 
+console.time('euler'); // initialise timer
+
 const limit = 10001;
 
 // Test if number is prime
@@ -25,3 +27,4 @@ const main = (limit) => {
 }
 
 console.log(main(limit));
+console.timeEnd('euler');

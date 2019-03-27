@@ -1,6 +1,8 @@
 // Find the sum of all the multiples of 3 or 5 below 1000.
 'use strict'
 
+console.time('euler'); // initialise timer
+
 const input = 1000;
 
 const main = (num) => {
@@ -10,3 +12,4 @@ const main = (num) => {
 };
 
 console.log(main(input));
+console.timeEnd('euler');
