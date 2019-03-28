@@ -5,8 +5,10 @@ console.time('euler'); // initialise timer
 
 const input = 500;
 
-const genNextTriangular = (index, prevValue) => prevValue+index; // return next successive triangular number
+// return next successive triangular number
+const genNextTriangular = (index, prevValue) => prevValue+index;
 
+// return count of divisors for provided number
 const getDivisorsCnt = num => {
 
     let divisors = 1; // each number is divisible by 1 (duh)
