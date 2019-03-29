@@ -21,6 +21,7 @@ const addBinary = (a, b) => {
     return remainder!==0 ? sum=`${remainder}${sum}` : sum // if remainder is other than 0, prepend it to the sum
 }
 
+// restructure to return array!!!
 const genCollatz = (num) => {
   let binary = num.toString(2),
       counter = 0;
@@ -38,6 +39,7 @@ const genCollatz = (num) => {
   return counter;
 }
 
+// restructure to compare with cached map of num:sequence.length
 const main = (input) => {
   let maxSequence = 0,
       output = 0;
