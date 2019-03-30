@@ -21,25 +21,25 @@ const addBinary = (a, b) => {
     return remainder!==0 ? sum=`${remainder}${sum}` : sum // if remainder is other than 0, prepend it to the sum
 }
 
-// restructure to return array!!!
 const genCollatz = (num) => {
   let binary = num.toString(2),
+      collatz = {},
       counter = 0;
 
   while (binary!=='1') {
+    collatz[binary] = counter;
     if (binary[binary.length-1]==='1') {
       binary = addBinary(`${binary}1`, binary);
       counter++
     } else {
       const previous = binary;
-      binary = binary.replace(/[0]+$/g, '');
-      counter += previous.length-binary.length;
+      binary = binary.replace(/[0]$/, '');
+      counter++
     }
   }
-  return counter;
+  return collatz
 }
 
-// restructure to compare with cached map of num:sequence.length
 const main = (input) => {
   let maxSequence = 0,
       output = 0;
@@ -52,4 +52,4 @@ const main = (input) => {
   return output
 }
 
-console.log(main(input));
+console.log(genCollatz(10));
