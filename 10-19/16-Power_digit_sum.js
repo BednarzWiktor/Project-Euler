@@ -1,4 +1,4 @@
-// What is the sum of the digits of the number 21000?
+// What is the sum of the digits of the number 2**1000?
 'use strict'
 
 console.time('euler'); // initialise timer
